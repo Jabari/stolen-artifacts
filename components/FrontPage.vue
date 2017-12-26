@@ -1,13 +1,14 @@
 <template>
 	<div id="landing-page-experience">
 		<div class="above-the-fold record-gif">
-			<button id="logo--spinning" class="logo" :class="welcomeAnimation === true ? 'user-welcome-sequence' : ''">
+			<button id="sa--spinning" class="logo" @click="transitionToPage('sa')" 
+				:class="welcomeAnimation === 'sa' ? 'user-welcome-sequence' : ''">
 				<div class="sa">
 					a
 				</div>
 			</button>
-			<button id="nutt--spinning" class="logo" :class="welcomeAnimation === true ? 'user-welcome-sequence' : ''">
-				<!-- <img src='data:image/svg+xml;utf8,<svg viewBox="0 0 100 100"><use xlink:href="./static/walnut.svg#walnut"></use></svg>'> -->
+			<button id="nutt--spinning" class="logo" @click="transitionToPage('nutt')" 
+				:class="welcomeAnimation === 'nutt' ? 'user-welcome-sequence' : ''">
 				<img class="nutt" src="../static/walnut.svg">
 			</button>
 		</div>
@@ -19,11 +20,24 @@ export default {
 	name: 'FrontPage',
 	data() {
 		return {
-			welcomeAnimation: false
+			welcomeAnimation: null
 		}
 	},
 	methods: {
-	
+		transitionToPage(page) {
+			this.welcomeAnimation = page;
+			var unselectedButton;
+
+			setTimeout(function(){
+				unselectedButton = document.querySelector('.logo:not(.user-welcome-sequence)');
+				unselectedButton.classList += " hide";
+				
+				setTimeout(function() {
+					unselectedButton.style.display = 'none';
+				}, 1500);
+			
+			}, 200)			
+		}
 	},
 	mounted() {
 		var that = this;
@@ -41,8 +55,15 @@ export default {
 }
 </script>
 <style lang="scss">
-$welcome-delay: 5s;
+$welcome-delay: 3s;
 $welcome-duration: 6s;
+
+%unselected-logos {
+	min-width: 0;
+	opacity: 0;
+	width: 0% !important;
+}
+
 #landing-page-experience {
 	position: fixed;
 	left: 0;
@@ -53,7 +74,9 @@ $welcome-duration: 6s;
 	.above-the-fold {
 		background: #010101;
 		display: flex;
-		flex-flow: row wrap;
+		flex-direction: row;
+		overflow: hidden;
+		//flex-flow: row wrap;
 		&.record-gif {
 			background-image: url('https://s3-us-west-2.amazonaws.com/stolenartifacts.com/imgs/black-white.gif');
 			background-repeat: no-repeat;
@@ -62,15 +85,53 @@ $welcome-duration: 6s;
 		}
 		.logo {
 			background: #fff;
+			border: 0;
 			color: #000;
+			display: block;
 			font-size: 10rem;
     	opacity: 1;
     	position: relative;
 			perspective-origin: bottom;
-			min-width: 200px;
+			transition: height $welcome-delay, width $welcome-delay, opacity $welcome-duration;
 			width: 50%;
+			&:hover {
+				box-shadow: 0px 0px 8px 5px #aaa inset;
+			}
+			&.user-welcome-sequence {
+				height: 100% !important;
+				width: 100vw !important;
+				animation: disappear $welcome-duration linear $welcome-delay 1;
+				animation-fill-mode: forwards;
+				&:before {
+					animation: user-welcome-animation $welcome-delay/3 linear $welcome-delay infinite;
+					transform-origin: center 18rem;
+				}
+				&#nutt--spinning .nutt {
+					
+				}
+				&:hover {
+					box-shadow: none;
+				}
+			}
+			&.hide {
+				@extend %unselected-logo;
+				min-width: 0;
+				opacity: 0;
+				width: 0% !important;
+			}
+			&:not(.user-welcome-sequence) {
+				min-width: 0 !important;
+				$notselected: &;
+				~ .user-welcome-sequence {
+					#{$notselected} {
+						min-width: 0 !important;
+						width: 0;
+						@extend %unselected-logos;
+					}
+				}
+			}
 		}
-		#logo--spinning {
+		#sa--spinning {
 			.sa {
 				height: 10rem;
     		font-size: 11rem;
@@ -86,14 +147,6 @@ $welcome-duration: 6s;
 				margin-top: -10rem;
     		height: 15rem;
 			}
-			&.user-welcome-sequence {
-				opacity: 0;
-				transition: opacity $welcome-duration $welcome-delay;
-				&:before {
-					animation: user-welcome-animation 2s linear $welcome-delay infinite;
-					transform-origin: center 18rem;
-				}
-			}
 		}
 		#nutt--spinning {
 
@@ -105,8 +158,30 @@ $welcome-duration: 6s;
 			}
 		}
 		@media only screen and (max-width: 399px) {
+			%unselected-logo {
+				min-height: 0;
+				opacity: 0;
+				height: 0% !important;
+			}
 			.logo {
+				height: 50%;
 				width: 100% !important;
+				&.hide {
+					@extend %unselected-logo;
+					min-width: 0;
+					opacity: 0;
+					width: 0% !important;
+				}
+				&.user-welcome-sequence {
+					transition: all $welcome-duration $welcome-delay;
+					transition: height $welcome-delay;
+					height: 100% !important;
+					 .logo {
+						transition: height $welcome-delay;
+						height: 0;
+						opacity: 0%;
+					}
+				}				
 			}
 		}
 	}
@@ -118,6 +193,15 @@ $welcome-duration: 6s;
 	}
 	to {
 		transform: rotate(1turn);
+	}
+}
+
+@keyframes disappear {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }
 </style>
