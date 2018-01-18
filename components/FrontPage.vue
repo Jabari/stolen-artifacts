@@ -26,6 +26,7 @@ export default {
 	methods: {
 		transitionToPage(page) {
 			this.welcomeAnimation = page;
+			var that = this;
 			var unselectedButton;
 
 			setTimeout(function(){
@@ -34,9 +35,11 @@ export default {
 				
 				setTimeout(function() {
 					unselectedButton.style.display = 'none';
-				}, 1500);
+					that.$router.push(page);
+				}, 5000);
 			
-			}, 200)			
+			}, 200)
+
 		}
 	},
 	mounted() {
