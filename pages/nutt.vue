@@ -26,6 +26,9 @@
       <li>
               <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%237+-+12-31-17+-+Looking+Forward+to+the+Past.mp3"><em># 7</em> - Looking Forward to the Past</a>
       </li>
+      <li>
+              <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%238+-+1-14-18+-+Rakish+Affection.mp3<em># 8</em> - Rakish Affection</a>
+      </li>
     </ul>
 	</main>
 </template>
