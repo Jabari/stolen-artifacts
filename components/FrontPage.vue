@@ -54,7 +54,11 @@ export default {
 		
 		// method that listens for drag-left/swipe-left event and spins the ~ 
 		// and slowly fades the div to reveal record gif
-	}
+	},
+	transition (to, from) {
+    if (!from) return 'slide-left'
+    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+  }
 }
 </script>
 <style lang="scss">
