@@ -34,7 +34,7 @@
 </template>
 <script>
         export default {
-                name: 'The Nutt',
+                name: 'nutt',
                 head () {
                     return {
                         base: { target: '_blank', href: 'https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/' }
