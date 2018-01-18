@@ -26,6 +26,7 @@ export default {
 	methods: {
 		transitionToPage(page) {
 			this.welcomeAnimation = page;
+			var that = this;
 			var unselectedButton;
 
 			setTimeout(function(){
@@ -34,9 +35,11 @@ export default {
 				
 				setTimeout(function() {
 					unselectedButton.style.display = 'none';
-				}, 1500);
+					that.$router.push(page);
+				}, 5000);
 			
-			}, 200)			
+			}, 200)
+
 		}
 	},
 	mounted() {
@@ -51,7 +54,11 @@ export default {
 		
 		// method that listens for drag-left/swipe-left event and spins the ~ 
 		// and slowly fades the div to reveal record gif
-	}
+	},
+	transition (to, from) {
+    if (!from) return 'slide-left'
+    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+  }
 }
 </script>
 <style lang="scss">
