@@ -11,8 +11,7 @@
 </template>
 <style lang="scss">
 h1 {
-	font-size: 3rem;
-	
+	font-size: 3rem;	
 }
 main {
 	background: #000;
