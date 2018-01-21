@@ -43,39 +43,46 @@
         }
 </script>
 <style lang="scss">
-        a {
-                color: #07a;
-                font-family: Consolas, Monaco, Mono, monospace;
-                line-height: 1.5;
-                margin: 1.5rem;
-                text-decoration: none;
-                text-shadow: 0 1px #efefef;
-                &:hover {
-                        color: darken(#07a, 5);
-                        font-weight: bold;
-                }
+a {
+        color: #07a;
+        font-family: Consolas, Monaco, Mono, monospace;
+        line-height: 1.5;
+        margin: 1.5rem;
+        text-decoration: none;
+        text-shadow: 0 1px #efefef;
+        &:hover {
+                color: darken(#07a, 5);
+                font-weight: bold;
         }
-        em {
-                font-weight: 600;
-        }
-        h1 {
-                margin: 1rem 0 2rem;
-                text-align: center;
-        }
-        li {
-                list-style: none;
-                line-height: 2rem;
-        }
-        p {
-        	line-height: 1.5;
-        	padding: 0 10% 2rem;
-        	min-width: 450px;
-        	width: 90%;
-        }
-        .lighten {
-        	color: #aaa;
-        }
-        #nutt {
+}
+em {
+        font-weight: 600;
+}
+h1 {
+        margin: 1rem 0 2rem;
+        text-align: center;
+}
+li {
+        list-style: none;
+        line-height: 2rem;
+}
+main#nutt {
+  background: #fff;
+}
+p {
+	line-height: 1.5;
+	padding: 0 10% 2rem;
+	width: 90%;
+}
+.lighten {
+	color: #aaa;
+}
+#nutt {
 
-        }
+}
+@media only screen and (max-width: 399px) {
+  p {
+    text-align: justify;
+  }
+}
 </style>

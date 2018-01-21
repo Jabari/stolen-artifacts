@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<main id="sa">
 		<section>
 			<h2>Stolen Artifacts is</h2>
 			<h1>
@@ -13,7 +13,7 @@
 h1 {
 	font-size: 3rem;	
 }
-main {
+main#sa {
 	background: #000;
 	height: 100vh;
 	width: 100vw;

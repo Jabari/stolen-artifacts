@@ -164,20 +164,25 @@ $welcome-duration: 6s;
 		    transform: translate(-50%, -50%);
 			}
 		}
-		@media only screen and (max-width: 399px) {
+	}
+}
+@media only screen and (max-width: 399px) {
 			%unselected-logo {
 				min-height: 0;
 				opacity: 0;
 				height: 0% !important;
 			}
+			#landing-page-experience .above-the-fold {
+				flex-direction: column;
+			}
 			.logo {
-				height: 50%;
+				height: 50% !important;
 				width: 100% !important;
 				&.hide {
 					@extend %unselected-logo;
 					min-width: 0;
 					opacity: 0;
-					width: 0% !important;
+					height: 0% !important;
 				}
 				&.user-welcome-sequence {
 					transition: all $welcome-duration $welcome-delay;
@@ -188,11 +193,20 @@ $welcome-duration: 6s;
 						height: 0;
 						opacity: 0%;
 					}
-				}				
+				}
+				&:not(.user-welcome-sequence) {
+					min-width: 100% !important;
+					$notselected: &;
+					~ .user-welcome-sequence {
+						#{$notselected} {
+							min-heigth: 0% !important;
+							width: 0;
+							@extend %unselected-logo;
+						}
+					}
+				}		
 			}
 		}
-	}
-}
 
 @keyframes user-welcome-animation {
 	from {
