@@ -1,6 +1,16 @@
 .page-enter-active, .page-leave-active {
-  transition: opacity .5s;
+	transition: transform .5s;
 }
-.page-enter, .page-leave-to {
+/*.page-leave-active {
+	transition: translateX(-50%);
+  //transition: opacity .5s;
+}*/
+.page-enter {
+	transform: translateX(100%);
+}
+.page-leave-to {
+	transform: translateX(-100%);
+}
+/*.page-enter, .page-leave-to {
   opacity: 0;
-}
+}*/

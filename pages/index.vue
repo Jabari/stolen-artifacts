@@ -4,10 +4,10 @@
       <!-- <logo/> -->
       <front-page />
       <h1 class="title">
-        stolen-artifacts
+        stolen artifacts
       </h1>
       <h2 class="subtitle">
-        The stolen artifacts website
+        stolen artifacts
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
@@ -25,7 +25,7 @@ export default {
   components: {
     FrontPage,
     Logo
-  }
+  },
 }
 </script>
 

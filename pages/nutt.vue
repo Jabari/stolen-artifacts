@@ -2,7 +2,8 @@
 	<main id="nutt">
     <h1>The Nutt <span class="lighten">archive</span></h1>
     <p>
-    	<em>The Nutt</em> airs every Sunday afternoon on <a href="https://en.wikipedia.org/wiki/KPFA/" target="_blank">KPFB 89.3FM</a> in Berkeley, California and surrounding areas. New hour long <a href="https://kpfa.org/kpfb/kpfb-programs/" target="_blank">radio shows</a> are uploaded here within 2 days of broadcast.
+    	<em>The Nutt</em> airs every Sunday afternoon on <a href="https://en.wikipedia.org/wiki/KPFA/" target="_blank">KPFB 89.3FM</a> in Berkeley, California and surrounding areas. <br />
+      New hour long <a href="https://kpfa.org/kpfb/kpfb-programs/" target="_blank">shows</a> are uploaded here within 2 days of broadcast.
     </p>
     <ul>
       <li>
@@ -33,21 +34,24 @@
 	</main>
 </template>
 <script>
-        export default {
-                name: 'nutt',
-                head () {
-                    return {
-                        base: { target: '_blank', href: 'https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/' }
-                    }
-                },
+  export default {
+    name: 'nutt',
+    head () {
+        return {
+            base: { target: '_blank', href: 'https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/' }
         }
+    },
+    transition (to, from) {
+      if (!from) return 'slide-left'
+      return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+    }
+  }
 </script>
 <style lang="scss">
 a {
         color: #07a;
         font-family: Consolas, Monaco, Mono, monospace;
-        line-height: 1.5;
-        margin: 1.5rem;
+        line-height: 1.75;
         text-decoration: none;
         text-shadow: 0 1px #efefef;
         &:hover {
@@ -57,6 +61,7 @@ a {
 }
 em {
         font-weight: 600;
+        font-style: normal;
 }
 h1 {
         margin: 1rem 0 2rem;
@@ -68,21 +73,13 @@ li {
 }
 main#nutt {
   background: #fff;
+  padding: 0 7.5%;
 }
 p {
 	line-height: 1.5;
 	padding: 0 10% 2rem;
-	width: 90%;
 }
 .lighten {
 	color: #aaa;
-}
-#nutt {
-
-}
-@media only screen and (max-width: 399px) {
-  p {
-    text-align: justify;
-  }
 }
 </style>

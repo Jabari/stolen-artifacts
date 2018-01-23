@@ -9,6 +9,14 @@
 		
 	</main>
 </template>
+<script>
+	export default {
+  transition (to, from) {
+    if (!from) return 'slide-left'
+    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+  }
+}
+</script>
 <style lang="scss">
 h1 {
 	font-size: 3rem;	

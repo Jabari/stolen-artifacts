@@ -3,14 +3,15 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'stolen-artifacts',
+    title: 'ã',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'The stolen artifacts website' }
+      { hid: 'description', name: 'description', content: 'stolen artifacts - good things in short supply' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
     ],
     css: [
       'assets/global.css'
@@ -19,7 +20,14 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#2fedc0' },
+  /*
+  ** Cache components
+  */
+  modules: [
+    // Simple usage
+    '@nuxtjs/component-cache',
+  ],
   /*
   ** Build configuration
   */
