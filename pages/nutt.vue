@@ -2,7 +2,7 @@
 	<main id="nutt">
     <h1>The Nutt <span class="lighten">archive</span></h1>
     <p>
-    	<em>The Nutt</em> airs every Sunday afternoon on <a href="https://en.wikipedia.org/wiki/KPFA/" target="_blank">KPFB 89.3FM</a> in Berkeley, California and surrounding areas. <br />
+    	<em>The Nutt</em>, hosted by Jabari Martin, airs every Sunday afternoon on <a href="https://en.wikipedia.org/wiki/KPFA/" target="_blank">KPFB 89.3FM</a> in Berkeley, California and surrounding areas. <br />
       New hour long <a href="https://kpfa.org/kpfb/kpfb-programs/" target="_blank">shows</a> are uploaded here within 2 days of broadcast.
     </p>
     <ul>
@@ -29,6 +29,9 @@
       </li>
       <li>
         <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%238+-+1-14-18+-+Rakish+Affection.mp3"><em># 8</em> - Rakish Affection</a>
+      </li>
+      <li>
+        <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%239+-+2-18-18+-+We+Do+THIS+Together.mp3"><em># 9</em> - We Do THIS Together</a>
       </li>
     </ul>
 	</main>
