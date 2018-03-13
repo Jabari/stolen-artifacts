@@ -33,6 +33,9 @@
       <li>
         <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%239+-+2-18-18+-+We+Do+THIS+Together.mp3"><em># 9</em> - We Do THIS Together</a>
       </li>
+      <li>
+        <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%2310+-+3-12-18+-+Sweet+Booty+Sweat.mp3"><em># 10</em> - Sweet Booty Sweat</a>
+      </li>
     </ul>
 	</main>
 </template>
