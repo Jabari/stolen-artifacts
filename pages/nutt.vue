@@ -36,6 +36,9 @@
       <li>
         <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%2310+-+3-12-18+-+Sweet+Booty+Sweat.mp3"><em># 10</em> - Sweet Booty Sweat</a>
       </li>
+      <li>
+        <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%2311+-+4-08-18+-+A+Slice+of+Life.mp3"><em># 11</em> - A Slice of Life</a>
+      </li>
     </ul>
 	</main>
 </template>
