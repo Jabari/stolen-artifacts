@@ -39,6 +39,9 @@
       <li>
         <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%2311+-+4-08-18+-+A+Slice+of+Life.mp3"><em># 11</em> - A Slice of Life</a>
       </li>
+      <li>
+        <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%2312+-+4-22-18+-+You+Can+Call+It+Love.mp3"><em># 12</em> - You Can Call It Love</a>
+      </li>
     </ul>
 	</main>
 </template>
