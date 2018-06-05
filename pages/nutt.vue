@@ -42,6 +42,9 @@
       <li>
         <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%2312+-+4-22-18+-+You+Can+Call+It+Love.mp3"><em># 12</em> - You Can Call It Love</a>
       </li>
+      <li>
+        <a href="https://s3-us-west-2.amazonaws.com/stolenartifacts.com/theNutt/The+Nutt+-+%2313+-+6-03-18+-+Scattered+Dreams.mp3"><em># 13</em> - Scattered Dreams</a>
+      </li>
     </ul>
 	</main>
 </template>
