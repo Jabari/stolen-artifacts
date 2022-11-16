@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/component-cache": "^1.1.1",
-    "nuxt": "^1.1.1",
+    "nuxt": "^2.15.8",
     "vue-touch": "^2.0.0-beta.4"
   },
   "devDependencies": {
